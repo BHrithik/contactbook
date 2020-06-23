@@ -1,0 +1,118 @@
+.form-control{
+	size:500px 500px 500px 500px;
+}
+
+.mega{
+	background-color: gray;
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+      }
+.btn-primary{
+	 background:none;
+	 border-color:black;
+ 	 text-align: center;
+ 	 text-decoration: none;
+ 	 color: black;
+}
+
+.btn-default{
+	 background:none;
+	 border-color:lightgray;
+ 	 text-align: center;
+ 	 text-decoration: none;
+ 	 color: black;
+}
+
+.btn-primary:hover{
+	background: lightgrey !important;
+}
+.btn-default:hover{
+	background: lightgrey !important;
+}
+.jumbotron{
+	margin: 0 !important;
+	padding: 50px !important;
+	color:black;
+	text-align: center;
+	background: #333 url('../images/final.jpg') -400px -200px;
+	border-bottom: 5px #f4f4f4 solid;
+}
+
+.jumbotron-main
+{
+	margin: 0px !important;
+	padding: 0 60pxf 40px 60px !important;
+
+}
+
+.jumbotron-main h1{
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+
+.jumbotron p.lead{
+	font-size: 25px;
+	margin-bottom: 60px;
+}
+.jumbotron-sub{
+	padding: 0 60pxf 40px 60px !important;
+	margin: 0 60pxf 40px 60px !important;
+}
+
+.navbar{
+	margin:0;
+	color: black;
+}
+.navbar a{
+	color:black ;
+	margin-bottom: 3px;
+}
+
+.navbar a:hover{
+	background: none !important;
+	border-bottom: black 3px solid;
+	margin-bottom:0;
+}
+
+.btn-outline-success{
+	background: none;
+	border-color: black;
+	color: black;
+}
+
+.btn-outline-success:hover{
+	background:grey;
+	border-color:grey;
+}
+
+.sr-only{
+	size: 500px 500px;
+}
+
+.middle{
+	margin-right: 250px;
+	margin-left: 250px;
+}
+
+.footer{
+	margin-top: 100px !important;
+	bottom:0 !important;
+	background: black;
+	color:white;
+}
+
+.table-responsive{
+	opacity: 2.0;
+}
+
+img {
+  opacity: 0.5;
+}

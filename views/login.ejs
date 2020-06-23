@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<link rel="stylesheet" href="css/style_1.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+	<link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	    <!-- Favicons -->
+	<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+
+	<style>
+		#messages ul.error{
+			color: red;
+			background-color: red;
+		}
+		#messages ul.success{
+			color: green;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="mega">
+	<div class="jumbotron jumbotron-main">
+		<nav class="navbar navbar-expand-md mb-4">
+		  <a class="navbar-brand" href="#">Contact Book</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  	<div class="collapse navbar-collapse" id="navbarCollapse">
+		    	<ul class="navbar-nav mr-auto">
+		     		<li class="nav-item active">
+		        		<a class="nav-link" href="http://localhost:3000/users/login">Home <span class="sr-only">(current)</span></a>
+		      		</li>
+		      		<li class="nav-item">
+		       			<a class="nav-link" href="http://localhost:3000/users/about" >About</a>
+		     		</li>
+		     		<li class="nav-item">
+		       			<a class="nav-link" href="http://localhost:3000/users/register" >Register</a>
+		     		</li>
+		    	</ul>
+		    	
+		  	</div>
+		</nav>
+		<div class="container">
+			<h1>Contacts book</h1>
+			<p class="lead">Please log in to access your contacts</p>
+		</div>
+		<div>
+			<%- messages() %>
+			<form method="post" action="/users/login" class="form-signin">
+			  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			  <br>
+			  <label for="inputEmail" class="sr-only">Email address</label>
+			  <input type="email" id="inputEmail" placeholder="Email address" size="30" required autofocus>
+			  <br><br>
+			  <label for="inputPassword" class="sr-only">Password</label>
+			  <input type="password" id="inputPassword" placeholder="Password" size="30"  required>
+			  <div>
+			    <a href="http://localhost:3000/users/register" style="color:black">New User?</a>
+			  </div>
+			  <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+			</form>
+		</div>
+	</div>
+</body>
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">17XJ1A0508</span>
+  </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</html>
+
+<!--
+	<form class="form-inline mt-2 mt-md-0">
+		      		<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+		      	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    	</form>
+
+-->
+

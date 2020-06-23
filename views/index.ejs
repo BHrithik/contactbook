@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title></title>
+	<link rel="stylesheet" href="css/style_1.css">
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+	<link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	    <!-- Favicons -->
+	<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+	<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+	<style>
+		#contact-cards{
+			background-color: lightgrey;
+			padding: 20px;
+			border-radius: 5px;
+			margin: 10px;
+			padding: 10px;
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			padding: 10px;
+		}
+</style>
+</head>
+<body>
+	<div class="mega">
+	<div class="jumbotron jumbotron-main">
+		<nav class="navbar navbar-expand-md mb-4">
+		  <a class="navbar-brand" href="#">Contact Book</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  	<div class="collapse navbar-collapse" id="navbarCollapse">
+		    	<ul class="navbar-nav mr-auto">
+		     		<li class="nav-item active">
+		        		<a class="nav-link" href="http://localhost:3000/users/login">Home <span class="sr-only">(current)</span></a>
+		      		</li>
+		      		<li class="nav-item">
+		       			<a class="nav-link" href="http://localhost:3000/users/about" >About</a>
+		     		</li>
+		     		<li class="nav-item">
+		       			<a class="nav-link" href="http://localhost:3000/users/register" >Register</a>
+		     		</li>
+		    	</ul>
+		    	
+		  	</div>
+		</nav>
+		<main class="contact_list">
+		      <div class="class_container">
+		        <form class="contact_form">
+		          <h1 class="contact_title">My Contacts</h1>
+		          <label for="name">Name</label>
+		          <input type="text" class="name" name="name" />
+		          <label for="email">Email</label>
+		          <input type="text" class="name" name="email" />
+		          <label for="phone">Phone</label>
+		          <input type="text" class="name" name="phone" />
+		          <label for="relation">Relation</label>
+		          <select
+		            class="contact-form-input"
+		            name="relation"
+		            id="relation"
+		            required
+		          >
+		            <option value="family">Family</option>
+		            <option value="Friend">Friend</option>
+		            <option value="Best Friend">Best Friend</option>
+		            <option value="Brother">Brother</option>
+		            <option value="Sister">Sister</option>
+		          </select>
+		          <button class="btn btn-primary" type="submit">
+		            Add
+		          </button>
+		        </form>
+		        <section id="contact-cards"></section>
+		      </div>
+    	</main>
+    	<script src="https://kit.fontawesome.com/1c499f59fe.js"></script>
+    	<script src="script.js"></script>
+		<!-- <form class="form-signin">
+			  <h1 class="h3 mb-3 font-weight-normal">Contacts</h1>
+			  <br>
+			  <h4 style="text-align: left;margin-left: 275px">New Contact</h4>
+			  <label class="sr-only">First name</label>
+			  <input type="text" placeholder="First name" size="30" required autofocus>
+			  <label for="inputEmail" class="sr-only">Last name</label>
+			  <input type="email" id="inputEmail" placeholder="Last name" size="30" required autofocus>
+			  
+			  <label for="number" class="sr-only">Ph no.</label>
+			  <input id="number" placeholder="Ph no." size="30"  required>
+			  <button class="btn btn-lg btn-primary" type="submit">Submit</button>
+		</form>
+		BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+			<div class="table-responsive">
+	        <table class="table table-striped table-sm">
+	          <thead>
+	            <tr>
+	              <th></th>
+	              <th>First Name</th>
+	              <th>Last Name</th>
+	              <th>Phone number</th>
+	              <th></th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td>1</td>
+	              <td>Lorem</td>
+	              <td>ipsum</td>
+	              <td>dolor</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>2</td>
+	              <td>amet</td>
+	              <td>consectetur</td>
+	              <td>adipiscing</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>3</td>
+	              <td>Integer</td>
+	              <td>nec</td>
+	              <td>odio</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>4</td>
+	              <td>libero</td>
+	              <td>Sed</td>
+	              <td>cursus</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>5</td>
+	              <td>dapibus</td>
+	              <td>diam</td>
+	              <td>Sed</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>6</td>
+	              <td>Nulla</td>
+	              <td>quis</td>
+	              <td>sem</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>7</td>
+	              <td>nibh</td>
+	              <td>elementum</td>
+	              <td>imperdiet</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	            <tr>
+	              <td>8</td>
+	              <td>sagittis</td>
+	              <td>ipsum</td>
+	              <td>Praesent</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+>	            </tr>
+	            <tr>
+	              <td>9</td>
+	              <td>Fusce</td>
+	              <td>nec</td>
+	              <td>tellus</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	              <td>10</td>
+	              <td>augue</td>
+	              <td>semper</td>
+	              <td>porta</td>
+	              <td><button class="btn btn-danger">Delete</button></td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+		
+	</div>
+</body>
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">17XJ1A0508</span>
+  </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+</html>
+
+<!--
+	<form class="form-inline mt-2 mt-md-0">
+		      		<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+		      	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    	</form>
+
+-->
+
