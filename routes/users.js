@@ -4,7 +4,7 @@ var mongojs =require('mongojs');
 var db = mongojs('passportapp',['users']);
 var bcrypt = require('bcryptjs');
 var passport = require('passport');
-var LocalStratergy = require('passport-local').Stratergy;
+var LocalStrategy = require('passport-local').Strategy;
 
 
 //LOGIN PAGE GET REQUEST
@@ -89,14 +89,14 @@ passport.deserializeUser(function(user,done){
 
 
 
-passport.use(new LocalStratergy(
-	function(username,password,one){
-		db.users.findOne({username:username},function(err,user){
+passport.use(new LocalStrategy(
+	function(username,password,done){
+		db.users.findOne({username: username},function(err,user){
 			if(err){
 				return done(err);
 			}
 			if(!user)
-			{
+			{f
 				return done(null,false,{message:'Incorrect username '});
 			}
 			bcrypt.compare(password,user.password,function(err, isMatch){
@@ -114,9 +114,10 @@ passport.use(new LocalStratergy(
 	));
 
 router.post('/login',
-	passport.authenticate('local'{successRedirect: '/',
+	passport.authenticate('local',   {successRedirect: '/',
 									failureRedirect: '/users/login',
-									failureFlash: 'Invalid Username or pass word'})function(req,res){
+									failureFlash: 'Invalid Username or pass word'}),
+		function(req,res){
 		console.log('auth successful');
 		res.redirect('/');
 	});
