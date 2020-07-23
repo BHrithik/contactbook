@@ -1,7 +1,7 @@
 # contactbook
-A simple contact book website where the user can signup and login to maintain a contacts book
+A simple contact book website where the user can signup,login, add or delete contacts. 
 
-How to run 
+How to run :-
 
 Navigate into the file through terminal. 
 
